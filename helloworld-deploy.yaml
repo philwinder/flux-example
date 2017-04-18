@@ -12,14 +12,7 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: quay.io/weaveworks/helloworld:master-a000001
-        args:
-        - -msg=Ahoy
+        image: node:4-alpine
+        args: ["node"]
         ports:
         - containerPort: 80
-      - name: sidecar
-        image: quay.io/weaveworks/sidecar:master-a000002
-        args:
-        - -addr=:8080
-        ports:
-        - containerPort: 8080
