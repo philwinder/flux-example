@@ -12,6 +12,6 @@ spec:
     spec:
       containers:
       - name: web
-        image: dockercloud/hello-world:staging
+        image: dockercloud/hello-world:stdout
         ports:
         - containerPort: 80
