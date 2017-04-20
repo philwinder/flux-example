@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  minReadySeconds: 5
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: web
+    spec:
+      containers:
+      - name: web
+        image: dockercloud/hello-world:staging
+        ports:
+        - containerPort: 80
