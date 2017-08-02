@@ -1,0 +1,21 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: node
+  labels:
+    name: node
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: node
+    spec:
+      containers:
+      - name: node
+        image: node:alpine
+        ports:
+         - containerPort: 80
+        args: ["sleep", "9999999999"]
